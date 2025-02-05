@@ -49,13 +49,26 @@ The model achieved strong performance with the following:
 ## Inference:
 The final model was evaluated on a set of test images, where it successfully detected and localized weeds. Bounding boxes closely aligned with ground truth, and the model performed well under varying environmental conditions.
 
+## Model Performance Comparison
+
+Below is a comparison of the performance metrics for different model variations during training and testing:
+
+| *Model*                       | *Precision* | *Recall* | *mAP50* | *mAP50-95* | *Fitness* | *F1 Score* | *Combined Metric* |
+|----------------------------------|---------------|------------|-----------|--------------|-------------|--------------|---------------------|
+| *Base Model*                   | 0.8619        | 0.7655     | 0.8455    | 0.5005       | 0.5350      | 0.8108       | 0.6557              |
+| *Consistency Regularization*   | 0.8078        | 0.8481     | 0.8409    | 0.5150       | 0.5476      | 0.8275       | 0.6712              |
+| *Pseudo Labeling*              | 0.8027        | 0.8212     | 0.8408    | 0.5157       | 0.5482      | 0.8118       | 0.6637              |
+| *FixMatch*                     | 0.8681        | 0.8010     | 0.8541    | 0.5392       | 0.5707      | 0.8332       | 0.6862              |
+| *Mean Teacher (100 epochs)*    | 0.8426        | 0.8596     | 0.8747    | 0.5755       | 0.6054      | 0.8510       | 0.7133              |
+| *Mean Teacher (200 epochs)*    | 0.9175        | 0.8505     | 0.9451    | 0.6956       | 0.7206      | 0.8827       | 0.7892              |
+
 ## Conclusion:
 The combination of supervised and semi-supervised learning techniques in this weed detection model demonstrates its capability for real-world agricultural applications, providing a reliable method for weed localization and identification.
 
 ## Requirements:
 - Python 3.x
 - PyTorch
-- YOLOv5 (Ultralytics)
+- YOLO11m (Ultralytics)
 - OpenCV
 - CUDA (for GPU acceleration)
 
