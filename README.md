@@ -15,7 +15,7 @@ The approach combines supervised learning using labeled data and semi-supervised
 - *Horizontal Flipping*: To increase generalization.
 - *Bounding Box Adjustments*: After augmentations to maintain correct localization.
 
-### 2. YOLOv5 Training:
+### 2. YOLO11m Training:
 - *Training*: 50 epochs using labeled data with a batch size of 16, learning rate of 5e-5, and image size of 640x640.
 - *GPU Acceleration*: Using CUDA for faster training.
 
